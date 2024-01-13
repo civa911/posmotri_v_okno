@@ -53,38 +53,37 @@ ol {
 .search-form {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 .content__details {
   display: flex;
   flex-direction: column;
-  
-  gap: 26px;
   justify-content: space-between;
+  gap: 26px;
 }
 .content__list {
   display: flex;
   flex-direction: column;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-content: space-between;
   gap: 30px;
   height: 298px;
   overflow: auto;
-  flex-wrap: wrap;
-  align-content: space-between;
-  flex-direction: row-reverse;
 }
 ul::-webkit-scrollbar {
-  width: 5px;        
+  width: 5px;
 }
 ul::-webkit-scrollbar-thumb {
-  background-color: black;
   border-radius: 6px;
+  background-color: black;
 }
 
 /* продолжение (size) */
 .result {
   display: flex;
   flex-direction: column;
-  
+  gap: 26px;
 }
 .result__video {
   width: 100%;
@@ -98,78 +97,169 @@ ul::-webkit-scrollbar-thumb {
 .content__list-item {
   display: flex;
   width: 394px;
-  
 }
 .content__video-card {
   display: flex;
+  flex-direction: row;
 
   width: 394px;
-  flex-direction: row;
-  
-  
 }
 .content__video-card-thumbnail {
   display: flex;
-  width: 194px;
-  height: 103px;
   flex-direction: column;
   justify-content: right;
+  width: 194px;
+  height: 103px;
 }
 
 .content__video-card-description-container {
-display: flex;
-flex-direction: column;
-width: 100%;
-height: 100%;
-object-fit: fill;
-gap: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 /* продолжение (placeholder) */
 
 .result__video-container {
-
+  position: relative;
 }
 .content__list {
-
+  position: relative;
 }
 
 /* продолжение (text style) */
 
 .search-form__fieldset-title {
-
+  color: #fff;
+  font-family: "Fira Sans Condensed";
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
 }
 .title {
   color: #fff;
-  
-font-family: "Oswald";
-font-size: 75px;
-font-style: normal;
-font-weight: 700;
-line-height: 94%; /* 70.5px */
-text-transform: uppercase;
+  font-family: "Oswald";
+  font-weight: 700;
+  font-size: 75px;
+  font-style: normal;
+  line-height: 94%; /* 70.5px */
+  text-transform: uppercase;
 }
 .content__accent {
   color: #545050;
 }
 .content__card-link {
-  text-decoration-line:none ;
+  text-decoration-line: none;
 }
 .content__video-card-title {
-  color: #FFF;
+  color: #fff;
   font-family: "Oswald";
+  font-weight: 700;
   font-size: 30px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 100%; 
+  line-height: 100%;
   text-transform: uppercase;
-
 }
 .content__video-card-description {
-  color: #FFF;
+  color: #fff;
+  font-family: "Fira Sans Condensed";
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 16.2px;
+}
+
+/* продолжение (Form elements and buttons) */
+
+.visually-hidden {
+  position: fixed;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+  
+}
+
+.search-form__label {
+  display: flex;
+  /* width: 225px;
+  height: 27px; */
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  cursor: pointer;
+  appearance: none;
+  
+}
+
+.search-form__textfield {
+  /* width: fit-content;
+  color: rgba(255, 255, 255, 0.70);
   font-family: "Fira Sans Condensed";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16.2px; 
+  line-height: normal;
+  appearance: none; */
+  
+  background-color: #1b1919;
 }
+
+.search-form__checkbox-list {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-flex;
+  align-items: center;
+  width: 19px;
+  height: 19px;
+  /* gap: 5px; */
+  border: 1px solid #fff;
+  
+}
+
+.button {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 34px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: "Fira Sans Condensed";
+  font-weight: 700;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+  background-color: #1b1919;
+  cursor: pointer;
+}
+
+.search-form__submit-button {
+  width: 194px;
+}
+
+.more-button {
+  width: 399px;
+}
+
+/* продолжение (Form elements and buttons) */
