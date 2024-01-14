@@ -52,14 +52,17 @@ ol {
 }
 .search-form {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  gap: 40px;
   align-items: flex-end;
 }
 .content__details {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  
   gap: 26px;
+  width: 399px;
+  
 }
 .content__list {
   display: flex;
@@ -68,7 +71,8 @@ ol {
   flex-wrap: wrap;
   align-content: space-between;
   gap: 30px;
-  height: 298px;
+
+  height: 293px;
   overflow: auto;
 }
 ul::-webkit-scrollbar {
@@ -83,7 +87,7 @@ ul::-webkit-scrollbar-thumb {
 .result {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 16px;
 }
 .result__video {
   width: 100%;
@@ -101,8 +105,8 @@ ul::-webkit-scrollbar-thumb {
 .content__video-card {
   display: flex;
   flex-direction: row;
-
   width: 394px;
+  padding: 2px;
 }
 .content__video-card-thumbnail {
   display: flex;
@@ -184,15 +188,13 @@ ul::-webkit-scrollbar-thumb {
   clip-path: inset(50%);
   white-space: nowrap;
 }
-
 fieldset {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   gap: 5px;
   border: none;
-  
+  align-items: flex-start;
 }
-
 .search-form__label {
   display: flex;
   /* width: 225px;
@@ -204,37 +206,36 @@ fieldset {
   appearance: none;
   
 }
-
 .search-form__textfield {
-  /* width: fit-content;
+  width: fit-content;
   color: rgba(255, 255, 255, 0.70);
   font-family: "Fira Sans Condensed";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  appearance: none; */
-  
+  display: flex;
+  gap: 10px;
+  border: none;
+  width: 225px;
   background-color: #1b1919;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
 }
-
 .search-form__checkbox-list {
   display: flex;
   flex-direction: row;
   gap: 15px;
-  
 }
-
 .search-form__pseudo-checkbox {
   display: inline-flex;
+  flex-direction: row;
   align-items: center;
   width: 19px;
   height: 19px;
   /* gap: 5px; */
   border: 1px solid #fff;
-  
 }
-
 .button {
   display: flex;
   flex-shrink: 0;
@@ -252,14 +253,18 @@ fieldset {
   text-align: center;
   background-color: #1b1919;
   cursor: pointer;
+  
 }
-
 .search-form__submit-button {
   width: 194px;
 }
-
 .more-button {
-  width: 399px;
+  width: 394px;
+
 }
 
-/* продолжение (Form elements and buttons) */
+/* продолжение (States of form elements and buttons) */
+
+.search-form__label:has(:focus-visible) {
+  border: none;
+}
