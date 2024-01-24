@@ -48,7 +48,7 @@ ol {
   justify-content: center;
   align-items: flex-end;
   gap: 29px;
-  padding: 0px 30px 180px;
+  padding: 0px 30px 150px;
 }
 .search-form {
   display: flex;
@@ -282,7 +282,7 @@ fieldset {
 }
 .search-form__pseudo-checkbox::before {
   content: "";
-  position: absolute;
+  position: relative;
   top: 2px;
   left: 2px;
   display: block;
