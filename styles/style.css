@@ -308,7 +308,7 @@ fieldset {
 .search-form__textfield:hover {
   text-decoration-line: none;
 }
-.search-form__label:hover {
+.search-form__label:not(:last-child):hover {
   text-decoration-line: underline;
 }
 .button:hover {
@@ -329,8 +329,8 @@ fieldset {
   border: 1px solid #fff;
   outline: 0;
 }
-.search-form__label:not(:first-child):hover {
-  text-decoration: none;
+.search-form__label:not(:first-of-type):hover {
+  text-decoration-line: underline;
 }
 .content__card-link:focus-visible {
   outline: none;
