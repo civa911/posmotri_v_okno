@@ -344,24 +344,25 @@ fieldset {
   text-decoration-line: underline;
 }
 
-.button .search-form__textfield .content__card-link:focus {
+.button:focus, 
+.search-form__textfield:focus, 
+.content__card-link:focus {
   outline: none;
 }
 
 .search-form__label:has(:focus-visible) { 
   outline: 1px solid #fff;
-  outline-offset: 1px;
-}
+} 
 
 /* :focus */
 .button:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 1px;
-}
+
+} 
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 1px;
+  
 }
 
 /* продолжение "Состояния карточек" */
