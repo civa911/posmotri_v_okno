@@ -251,10 +251,6 @@ fieldset {
   gap: 15px;
 }
 
-.search-form__checkbox {
-  display: none;
-}
-
 .search-form__pseudo-checkbox {
   position: relative;
   display: inline-flex;
